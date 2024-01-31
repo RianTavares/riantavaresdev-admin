@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "players",
+  "info": {
+    "singularName": "player",
+    "pluralName": "players",
+    "displayName": "Player"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "tournaments": {
+      "type": "integer"
+    },
+    "points": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "profile": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
