@@ -4,7 +4,8 @@
   "info": {
     "singularName": "player",
     "pluralName": "players",
-    "displayName": "Player"
+    "displayName": "Player",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -16,7 +17,8 @@
       "required": true
     },
     "tournaments": {
-      "type": "integer"
+      "type": "integer",
+      "required": true
     },
     "points": {
       "type": "integer",
@@ -24,14 +26,33 @@
       "default": 0
     },
     "profile": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
+      ]
+    },
+    "groups": {
+      "type": "enumeration",
+      "enum": [
+        "Grupo das 18",
+        "Grupo das 19",
+        "Grupo das 20",
+        "Grupo das 21"
       ],
-      "type": "media",
-      "multiple": false
+      "required": true
+    },
+    "sex": {
+      "type": "enumeration",
+      "enum": [
+        "Male",
+        "Female"
+      ],
+      "required": true
     }
   }
 }
