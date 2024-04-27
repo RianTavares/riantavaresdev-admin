@@ -1,0 +1,30 @@
+{
+  "kind": "singleType",
+  "collectionName": "projects_headers",
+  "info": {
+    "singularName": "projects-header",
+    "pluralName": "projects-headers",
+    "displayName": "ProjectsHeader",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "latestProject": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::project.project"
+    },
+    "topProjects": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::project.project"
+    }
+  }
+}
